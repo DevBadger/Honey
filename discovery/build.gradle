@@ -10,10 +10,6 @@ buildscript {
     }
 }
 
-plugins {
-    id "org.sonarqube" version "2.6.2"
-}
-
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'docker'
@@ -29,10 +25,6 @@ repositories {
     jcenter()
 }
 
-configurations {
-    providedRuntime
-}
-
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:Edgware.SR3"
@@ -41,12 +33,11 @@ dependencyManagement {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
-    compile 'org.springframework.cloud:spring-cloud-config-server'
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
 
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.codehaus.groovy:groovy-all:2.4.10'
     testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
 task image(type: Docker, dependsOn: build ) {
@@ -56,10 +47,7 @@ task image(type: Docker, dependsOn: build ) {
         copy {
             from jar
             into "${stageDir}/target"
-        }
-        copy {
-            from 'ssh_config'
-            into "${stageDir}/target"
+
         }
     }
 }
@@ -72,6 +60,7 @@ task publishImage(type: Docker, dependsOn: build ) {
         copy {
             from jar
             into "${stageDir}/target"
+
         }
     }
 }

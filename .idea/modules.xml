@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Honey.iml" filepath="$PROJECT_DIR$/Honey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/../config-properties/config-properties.iml" filepath="$PROJECT_DIR$/../config-properties/config-properties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_main.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_main.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config/config_test.iml" filepath="$PROJECT_DIR$/.idea/modules/config/config_test.iml" group="config" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery_main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery_main.iml" group="discovery" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery_test.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery_test.iml" group="discovery" />
+    </modules>
+  </component>
+</project>

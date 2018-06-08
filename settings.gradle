@@ -1,3 +1,4 @@
 rootProject.name = 'Honey'
 //include ':eureka'
 include ':config'
+include ':discovery'
